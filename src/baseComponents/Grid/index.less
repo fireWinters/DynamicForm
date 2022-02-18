@@ -1,0 +1,19 @@
+@import '../../styles/index.less';
+
+@gridPrefixCls: alitajs-dform-grid;
+
+.@{gridPrefixCls} {
+  width: 100%;
+  --gap: 0;
+  --gap-horizontal: var(--gap);
+  --gap-vertical: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  align-items: stretch;
+  column-gap: var(--gap-horizontal);
+  row-gap: var(--gap-vertical);
+
+  &-item {
+    grid-column-end: span var(--item-span);
+  }
+}

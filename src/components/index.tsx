@@ -1,5 +1,4 @@
 export { default as AddressPicker } from './AddressPicker';
-export { default as CoverRadio } from './CoverRadio';
 export { default as ExtraInput } from './ExtraInput';
 export { default as MultiplePicker } from './MultiplePicker';
 export { default as DformInput } from './NomarInput';
@@ -15,6 +14,3 @@ export { default as DformCustom } from './NomarCustom';
 export { default as DformText } from './NomarText';
 export { default as DformFile } from './NomarFile';
 export { default as RangeDatePicker } from './RangeDatePicker';
-export { default as TextItem } from './TextItem';
-export { default as InputItem } from './InputItem';
-export { default as Field } from './Field';

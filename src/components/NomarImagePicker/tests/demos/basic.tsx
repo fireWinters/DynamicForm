@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button, WhiteSpace } from 'antd-mobile-v2';
-import DynamicForm from '../../../../index';
+import { Button } from 'antd-mobile-v2';
+import DynamicForm, { WhiteSpace, DformImagePicker } from '../../../..';
 import { useForm } from 'rc-field-form';
-import NomarImagePicker from '../..';
 
 interface BasicProps {
   onFinish: any;
@@ -41,36 +40,35 @@ const Page: React.FC<BasicProps> = ({
   return (
     <>
       <DynamicForm {...formProps}>
-        <NomarImagePicker
+        <DformImagePicker
           fieldProps="insertImg"
           title="请添加图片(自动压缩)"
           required
           compressRatio={0.5}
           onChange={(files: any, type: string, index: number | undefined) => {
-            onChange();
+            // eslint-disable-next-line no-console
+            console.log(files, type, index);
           }}
+          maxLength={2}
         />
-        <NomarImagePicker
+        <DformImagePicker
           fieldProps="showImg"
           title="展示图片(限制上传的图片大小)"
           // disableDelete: true,
-          onImageClick={(index: number | undefined, files: any) => {
-            onImageClick();
-          }}
+          onImageClick={onImageClick}
           limitSize={3 * 1024 * 1024}
           defaultValue={fileList}
-          onChange={(files: any, type: string, index: number | undefined) => {
-            onChange();
-          }}
+          onChange={() => onChange()}
+          showView={false}
         />
-        <NomarImagePicker
+        <DformImagePicker
           fieldProps="noInsertImg"
           title="不可添加图片"
           required
           selectable={false}
           defaultValue={fileList}
         />
-        <NomarImagePicker
+        <DformImagePicker
           fieldProps="maxLengthImg"
           title="限制上传数量(2张)"
           maxLength={2}

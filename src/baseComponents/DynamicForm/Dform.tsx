@@ -32,7 +32,6 @@ import {
   RangeDatePicker,
   DformRadio,
   DformCheckBox,
-  CoverRadio,
   DformImagePicker,
   DformCustom,
   MultiplePicker,
@@ -40,7 +39,7 @@ import {
   DformText,
   DformPicker,
   DformFile,
-} from '../';
+} from '../../components';
 
 export const FormItemType = {
   input: DformInput,
@@ -52,7 +51,6 @@ export const FormItemType = {
   extraInput: ExtraInput,
   rangeDatePicker: RangeDatePicker,
   checkbox: DformCheckBox,
-  coverRadio: CoverRadio,
   image: DformImagePicker,
   custom: DformCustom,
   multiplePicker: MultiplePicker,
@@ -319,7 +317,6 @@ const Dform: FC<IDynamicFormProps> = (fatherProps) => {
     return jsonData.map((item: any) => {
       const mItem = { ...item, ...(changeForm[item.fieldProps] || {}) };
       const { type, groupProps, fieldProps, children } = mItem;
-
       if (type === 'group') {
         return (
           <Group {...groupProps} key={fieldProps}>

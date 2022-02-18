@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import { InputItemPropsType } from 'antd-mobile-v2/es/input-item/PropsType';
 import { Rule } from 'rc-field-form/es/interface';
 import { StringAndUdfEvent, ClickEvent } from '../../PropsType';
-import InputItem from '../InputItem';
-import Field from '../Field';
-import Title from '../Title';
-import { TextItem } from '../..';
+import InputItem from '../../baseComponents/InputItem';
+import Field from '../../baseComponents/Field';
+import Title from '../../baseComponents/Title';
+import TextItem from '../../baseComponents/TextItem';
 import { allPrefixCls } from '../../const/index';
 
 export interface INomarInputProps extends InputItemPropsType {

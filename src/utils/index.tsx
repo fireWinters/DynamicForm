@@ -1,3 +1,8 @@
+/**
+ * 这里为用户可使用的公共方法
+ * 如需写些内部的工具类
+ * 请编辑在 `tool.ts` 文件下
+ */
 import dayjs from 'dayjs';
 import { FormInstance } from 'rc-field-form/es/interface';
 
@@ -16,42 +21,6 @@ export const getInitKeyValue = ({
     obj[item.fieldProps] = form.getFieldValue(item.fieldProps);
   });
   return obj;
-};
-
-/**
- * 时间展示类型改变事件
- * @param val
- */
-export const changeDateFormat = (
-  val: Date,
-  modeType: string,
-  format?: string | undefined | ((value: Date) => string),
-) => {
-  let dateFormat = '';
-  switch (modeType) {
-    case 'datetime':
-      dateFormat = dayjs(val).format('YYYY-MM-DD HH:mm');
-      break;
-    case 'month':
-      dateFormat = dayjs(val).format('YYYY-MM');
-      break;
-    case 'time':
-      dateFormat = dayjs(val).format('HH:mm');
-      break;
-    case 'year':
-      dateFormat = dayjs(val).format('YYYY');
-      break;
-    default:
-      dateFormat = dayjs(val).format('YYYY-MM-DD');
-      break;
-  }
-  if (format && typeof format === 'string') {
-    dateFormat = dayjs(val).format(format);
-  }
-  if (format && typeof format === 'function') {
-    dateFormat = format(val);
-  }
-  return dateFormat;
 };
 
 export const dateChange = (date: Date | string) => {
@@ -80,30 +49,6 @@ export const getByteLen = (val: string) => {
     }
   });
   return len;
-};
-
-export const resetLabel = (
-  list: string[] = [],
-  placeholderList: string[] = [],
-) => {
-  if (list.length === placeholderList.length) return list;
-  list.push(placeholderList[list.length]);
-  return list;
-};
-
-export const filterObjList = (
-  label: string = '',
-  data: any = [],
-  value: string | number = '',
-) => {
-  if (data && data.length) {
-    let filList = [];
-    filList = data.filter((it: { [x: string]: string | number }) => {
-      return it[label] === value;
-    });
-    return filList;
-  }
-  return [];
 };
 
 /**

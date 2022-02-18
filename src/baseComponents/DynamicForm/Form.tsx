@@ -20,7 +20,6 @@ import {
   RangeDatePicker,
   DformRadio,
   DformCheckBox,
-  CoverRadio,
   DformImagePicker,
   DformCustom,
   MultiplePicker,
@@ -28,7 +27,7 @@ import {
   DformText,
   DformPicker,
   DformFile,
-} from '../';
+} from '../../components';
 
 import Title from '../Title';
 
@@ -44,7 +43,6 @@ const FormItemType = {
   extraInput: ExtraInput,
   rangeDatePicker: RangeDatePicker,
   checkbox: DformCheckBox,
-  coverRadio: CoverRadio,
   image: DformImagePicker,
   custom: DformCustom,
   multiplePicker: MultiplePicker,

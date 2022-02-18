@@ -1,10 +1,11 @@
-import React, { FC, useState, useEffect } from 'react';
-import { Modal, Button, WingBlank, WhiteSpace, List } from 'antd-mobile-v2';
+import React, { FC, useState } from 'react';
+import { Modal, Button, List } from 'antd-mobile-v2';
 import copy from 'copy-to-clipboard';
 import Form from 'rc-field-form';
 import { Store, ValidateErrorEntity } from 'rc-field-form/es/interface';
 import EditForm from '../EditForm/EditForm';
-import { getFormItem, DFormData } from '../DynamicForm/Form';
+import { WingBlank, WhiteSpace } from '..';
+import { getFormItem } from '../DynamicForm/Form';
 import { IFormItemProps } from '../../PropsType';
 
 interface NewFieldPickerProps {
@@ -121,25 +122,25 @@ const InitFormData = [
     extraType: 'select',
     positionType: 'vertical',
   },
-  {
-    type: 'rangeDatePicker',
-    fieldProps: 'datePicker1',
-    fieldProps2: 'datePicker2',
-    required: true,
-    placeholder: '请输入',
-    placeholder2: '请选择',
-    title: '时间区间选择框',
-    modeType: 'datetime',
-    positionType: 'vertical',
-  },
-  {
-    type: 'coverRadio',
-    fieldProps: 'cover',
-    required: true,
-    title: '覆盖式Radio框',
-    data: radioList,
-    positionType: 'horizontal',
-  },
+  // {
+  //   type: 'rangeDatePicker',
+  //   fieldProps: 'datePicker1',
+  //   fieldProps2: 'datePicker2',
+  //   required: true,
+  //   placeholder: '请输入',
+  //   placeholder2: '请选择',
+  //   title: '时间区间选择框',
+  //   modeType: 'datetime',
+  //   positionType: 'vertical',
+  // },
+  // {
+  //   type: 'coverRadio',
+  //   fieldProps: 'cover',
+  //   required: true,
+  //   title: '覆盖式Radio框',
+  //   data: radioList,
+  //   positionType: 'horizontal',
+  // },
   {
     type: 'multiplePicker',
     fieldProps: 'multiplePicker',
