@@ -57,6 +57,7 @@ const Page: FC = () => {
     valueTooLong:
       '欢迎使用 dform 动态表单欢迎使用 dform 动态表单欢迎使用 dform 动态表单欢迎使用 dform 动态表单欢迎使用 dform 动态表单欢迎使用 dform 动态表单',
     titleTooLong: '11',
+    usercountry: '中国',
   };
 
   const formProps = {
@@ -110,6 +111,14 @@ const Page: FC = () => {
                 message: '名称只允许包含数字、字母和下划线',
               },
             ]}
+          />
+          <DformInput
+            fieldProps="usercountry"
+            title="国籍"
+            placeholder="请输入国籍"
+            extra={photoImg()}
+            inputType="text"
+            disabled={true}
           />
         </Group>
         <Group
