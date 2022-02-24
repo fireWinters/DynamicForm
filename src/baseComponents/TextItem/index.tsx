@@ -66,8 +66,6 @@ const TextItem: FC<ITextItemProps> = (props) => {
     [`${allPrefixCls}-input-label-auto`]: labelNumber > 7,
   });
 
-  console.log(placeholder);
-
   const inputItemClick = () => {
     if (disabled) return;
     if (onClick) onClick(value);
@@ -107,6 +105,7 @@ const TextItem: FC<ITextItemProps> = (props) => {
             id={`text-${fieldProps}`}
             className={classnames({
               [`${prefixCls}-text`]: true,
+              [`${prefixCls}-disabled`]: disabled,
               'alitajs-dform-disabled': disabled && value,
               [className]: className,
             })}
