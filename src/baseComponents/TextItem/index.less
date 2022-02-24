@@ -40,7 +40,8 @@
     display: flex;
     flex-direction: column;
     .@{textPrefixCls}-text {
-      color: @alita-dform-value-color;
+      // color: @alita-dform-value-color;
+      color: @color-text-disabled;
       .text-item();
     }
   }
@@ -64,6 +65,9 @@
   &-overflow {
     text-align: right;
     color: @alita-dform-radio-color;
+  }
+  &-disabled {
+    color: @color-text-disabled;
   }
 
   .am-input-extra {
