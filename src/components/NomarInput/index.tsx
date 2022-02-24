@@ -68,7 +68,6 @@ const DformInput: FC<INomarInputProps> = (props) => {
         placeholder={placeholder}
         extra={extra}
         coverStyle={{
-          color: '#999',
           ...coverStyle,
         }}
         isVertical={isVertical}
